@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app-wrapper">
+    <div class="card">
+      <h1 class="app-title">Notes App</h1>
+      <p class="subtitle">Quick thoughts, saved locally in your browser</p>
+
+      <form id="noteForm" class="note-form">
+        <input type="text" id="noteTitle" placeholder="Note title..." autocomplete="off" />
+        <textarea id="noteBody" rows="4" placeholder="Write your note here..."></textarea>
+        <button type="submit" class="primary-btn">Add Note</button>
+      </form>
+
+      <div id="notesContainer" class="notes-grid">
+        <!-- <div class="note-card">
+          <h3 class="note-title">Project Ideas</h3>
+          <p class="note-text">Build 10 small JavaScript projects to practice DOM, events and localStorage.
+          </p>
+          <div class="note-footer">
+            <span class="note-date">Saved: Today</span>
+            <button class="delete-note-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-card">
+          <h3 class="note-title">Reading List</h3>
+          <p class="note-text">MDN docs on Array methods, Event Loop, LocalStorage, and Fetch API.
+          </p>
+          <div class="note-footer">
+            <span class="note-date">Saved: Yesterday</span>
+            <button class="delete-note-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-card">
+          <h3 class="note-title">CSS Ideas</h3>
+          <p class="note-text">Try glassmorphism cards, neon outlines, and subtle hover animations.
+          </p>
+          <div class="note-footer">
+            <span class="note-date">Saved: 2 days ago</span>
+            <button class="delete-note-btn">Delete</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
