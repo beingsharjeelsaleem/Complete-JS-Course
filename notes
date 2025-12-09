@@ -1,0 +1,553 @@
+for(let i = 1; i<=101; i++) {
+    console.log(i)
+}
+
+let i = 1;
+while(i <= 32) {
+    console.log(i);
+    i++;
+}
+
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while(i<=32)  
+
+for(let i = 1; i<201; i++) {
+    console.log(i);
+    if (i === 32) {
+        break;
+    }
+}
+
+for(let i = 1; i<201; i++) {
+    if(i === 32) {
+        continue;
+    }
+    console.log(i)
+}
+
+
+// Functions 
+
+function abcd() {
+    // Function Declaration
+}
+
+let abcd = function() {
+    // Function Expression
+}
+
+let abcd = () => {
+    // Fat Arrow Function
+}
+
+
+function subtract(v1, v2, v3) //parameters {
+    console.log(v1 + v2 + v3)
+}
+
+subtract(1, 5, 7) // arguments
+
+
+function subtract(v1 = 0, v2 = 0 , v3 = 0) // default parameters {
+    console.log(v1 + v2 + v3)
+}
+
+subtract(2, 5 ,7)
+
+function abcd(...val) // rest parameters{
+    console.log(val)
+}
+
+abcd(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+// functions = return
+
+function abcd(v) {
+    return 12 + v;
+}
+
+let val = abcd(12);
+console.log(val)
+
+
+// higher order function
+
+function abcd() {
+    return function(){
+    console.log("Yajju Chachu")
+}
+}
+
+abcd()()
+
+
+
+// pure vs impure function, pure doesnt change the outside variable value whereas impure changes it
+
+// closures functions
+
+function abcd() {
+    let a = 12;
+    return function() {
+        console.log(a)
+    }
+}
+
+abcd()()
+
+
+// lexical scoping
+
+function abcd() {
+    let a = 12;
+    return function efgh() {
+        let b = 14;
+        return function ijkl() {
+            let c = 16
+            console.log(a, b, c)
+        }
+    }
+}
+
+console.log(abcd()()())
+
+
+
+// immediately invoke function expressions
+
+(function() {
+    console.log("red")
+})();
+
+
+
+
+// Constructor Function (Old Style)
+
+    function CreatePencil(name, company, price, qty) {
+        this.name = name;
+        this.company = company;
+        this.price = price;
+        this.qty = qty;
+    }
+
+    let pencil1 = new CreatePencil("Nataraj", "Nataraj", "black", 13, 4);
+    let pencil2 = new CreatePencil("Doms", "Doms", "red", 24, 3);
+
+
+
+    // Class Constructor Function (New ES6 Style)
+
+class CreatePencil {
+  constructor(name, company, color, price, qty) {
+    this.name = name;
+    this.company = company;
+    this.color = color;
+    this.price = price;
+    this.qty = qty;
+  }
+
+  write(text) {
+    let h1 = document.createElement("h1");
+    h1.textContent = text;
+    h1.style.color = this.color;
+    document.body.appendChild(h1);
+  }
+}
+
+let pencil1 = new CreatePencil("Nataraj", "Nataraj", "black", 13, 4);
+let pencil2 = new CreatePencil("Doms", "Doms", "red", 24, 3);
+
+    
+
+// Class Constructor Function With Extends And Super (New ES6 Style)
+
+class User {
+  constructor(name, username, address, email) {
+    this.name = name;
+    this.username = username;
+    this.address = address;
+    this.email = email;
+    this.role = "user";
+  }
+
+  checkRole() {
+    console.log(`You are a ${this.role}`);
+  }
+
+  write(text) {
+    let h1 = document.createElement("h1");
+    h1.textContent = `${this.name}: ${text}`;
+    document.body.appendChild(h1);
+  }
+}
+
+class Admin extends User {
+  constructor(name, username, address, email) {
+    super(name, username, address, email);
+    this.role = "admin";
+  }
+
+  remove() {
+    document.querySelectorAll("h1").forEach((elem) => {
+      elem.remove();
+    });
+  }
+}
+
+let user1 = new User(
+  "Sharjeel",
+  "beingsharjeelsaleem",
+  "Karachi Pakistan",
+  "sharjeel.business12@gmail.com"
+);
+
+let user2 = new User(
+  "Sufiyan",
+  "beingsufiyanimran",
+  "Karachi Pakistan",
+  "sufiyan.busines47@gmail.com"
+);
+
+let admin1 = new Admin(
+  "admin1",
+  "admin123",
+  "Sheridan Wyoming",
+  "admin@huihui.com"
+);
+
+
+// Prototypal Inheritance
+
+let coffee = {
+  color: "dark",
+  drink: function () {
+    console.log("gut gut gut");
+  },
+};
+
+let arabiataCoffee = Object.create(coffee);
+arabiataCoffee.taste = "Karwa";
+arabiataCoffee.drink();
+
+
+// callback function
+
+function kuchDerBaadChalunga(fnc) {
+  setTimeout(fnc, Math.floor(Math.random() * 10) * 1000);
+}
+
+kuchDerBaadChalunga(function () {
+  console.log("Huhuhuuh");
+});
+
+// Promises
+
+let pr = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    let rn = Math.floor(Math.random() * 10);
+    if (rn > 5) resolve("resolved with " + rn);
+    else reject("rejected with " + rn);
+  }, 3000);
+});
+
+pr.then(function (val) {
+  console.log(val);
+}).catch(function (val) {
+  console.log(val);
+});
+
+.................
+
+let pr = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    let rn = Math.floor(Math.random() * 10);
+    if (rn > 5) resolve("resolved with " + rn);
+    else reject("rejected with " + rn);
+  }, 3000);
+});
+
+async function abcd() {
+  try {
+    let val = await pr;
+    console.log(val);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+abcd();
+
+
+//api fetching
+
+fetch("https://randomuser.me/api/")
+  .then((rawdata) => rawdata.json())
+  .then((data) => console.log(data.results[0].name.first))
+  .catch((err) => console.log(err));
+
+
+  // module patterns (IIFE)
+
+  let Bank = (function () {
+  let bankBalance = 12000;
+
+  function checkBalance() {
+    console.log(bankBalance);
+  }
+
+  function widthdraw(val) {
+    if (val <= bankBalance) {
+      bankBalance -= val; 
+      console.log(bankBalance);
+    }
+  }
+
+  return {
+    checkBalance,
+    widthdraw,
+  };
+})();
+
+Bank.widthdraw(9000);
+
+
+
+// Factory Function Pattern
+
+function createProduct(name, price) {
+  let stock = 10;
+  return {
+    name,
+    price,
+    checkStock() {
+      console.log(
+        `we have ${stock} ${
+          stock <= 1 ? name : name + "s"
+        } in the stock currently`
+      );
+    },
+    buy(qty) {
+      if (qty <= stock) {
+        stock -= qty;
+        console.log(
+          `booked, we now have ${stock} ${stock <= 1 ? name : name + "s"} left`
+        );
+      } else {
+        console.log(
+          `we dont have that many products, we only have ${stock} ${
+            stock <= 1 ? name : name + "s"
+          } left`
+        );
+      }
+    },
+    refill(qty) {
+      stock += qty;
+      console.log(
+        `we now have ${stock} ${stock <= 1 ? name : name + "s"} in our stock`
+      );
+    },
+  };
+}
+
+let iphone = createProduct("Iphone", 70000);
+iphone.refill(9);
+iphone.buy(18)
+
+
+// Observer Pattern
+
+class YoutubeChannel {
+  constructor() {
+    this.subscribers = [];
+  }
+
+  subscribe(user) {
+    this.subscribers.push(user);
+    user.update(`You have subscribed the channel`);
+  }
+  unsubscribe(user) {
+    this.subscribers = this.subscribers.filter((sub) => sub !== user);
+    user.update(`You have unsubscribed the channel`);
+  }
+  notify(message) {
+    this.subscribers.forEach((subs) => subs.update(message));
+  }
+}
+
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  update(data) {
+    console.log(`Hey ${this.name}! ${data}`);
+  }
+}
+
+let hasiTv = new YoutubeChannel();
+let user1 = new User("Sharjeel");
+let user2 = new User("Sufiyan");
+
+hasiTv.subscribe(user1);
+hasiTv.subscribe(user2);
+
+hasiTv.notify("New video has been uploaded on the channel");
+
+
+
+// debounce
+
+let input = document.querySelector("input");
+
+function debounce(fnc, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fnc(...args);
+    }, delay);
+  };
+}
+
+input.addEventListener(
+  "input",
+  debounce(function () {
+    console.log("first");
+  }, 1000)
+);
+
+
+// throttle
+
+let input = document.querySelector("input");
+
+function throttle(fnc, delay) {
+  let timer = 0;
+  return function (...args) {
+    let dateNow = Date.now();
+    if (dateNow - timer >= delay) {
+      timer = dateNow;
+      fnc(...args);
+    }
+  };
+}
+
+input.addEventListener(
+  "input",
+  throttle(function () {
+    console.log("first");
+  }, 1000)
+);
+
+// lazy loading with IntersectionObserver
+
+let imgs = document.querySelectorAll("img");
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        let img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.add("loaded");
+        observer.unobserve(img);
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.3,
+  }
+);
+
+imgs.forEach((img) => {
+  observer.observe(img);
+});
+
+
+// Code Splitting
+
+//heavy.js exporting file
+export function heavyFile() {
+  console.log("heavy files loaded");
+}
+// script.js importing file
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", async () => {
+  let heavyJs = await import("./heavy.js");
+  heavyJs.heavyFile();
+});
+
+
+//Avoiding unneccessary reflows and repaints
+
+let ul = document.querySelector("ul");
+let space = document.createDocumentFragment();
+
+for (let i = 1; i <= 100000; i++) {
+  let li = document.createElement("li");
+  li.textContent = i;
+  space.appendChild(li);
+}
+
+ul.appendChild(space)
+
+//Memory leaks, timers, eventListeners
+
+let timer = 0;
+const int = setInterval(() => {
+  if(timer < 10) {
+    timer++;
+    console.log(timer)
+  } else {
+    clearInterval(int)
+    console.log("first")
+  }
+}, 500);
+
+// separation of concerns
+
+let button = document.querySelector("button");
+let ul = document.querySelector("ul");
+
+function add(n1, n2) {
+  return n1 + n2;
+}
+
+button.addEventListener("click", () => {
+  let n1 = Math.floor(Math.random() * 10);
+  let n2 = Math.floor(Math.random() * 10);
+  let finalAddition = add(n1, n2);
+  let li = document.createElement("li");
+  li.textContent = finalAddition;
+  ul.appendChild(li);
+});
+
+
+//Call stack
+
+function a() {
+  console.log("a");
+}
+function b() {
+  a();
+  console.log("b");
+}
+function c() {
+  b();
+  console.log("c");
+}
+
+c();
+
+
+// web apis
+
+//console setTimeout setInterval alert prompt,
+//JS ka part nhi hoti
+
+// Event Loop

@@ -1,0 +1,73 @@
+Project Idea: Advanced Personal Finance Dashboard
+
+Project Goal: Build a finance dashboard where users can track incomes and expenses, categorize them, filter/sort them, and visualize totals.
+
+Features to Implement:
+
+Add Income & Expenses
+
+Two forms: one for income, one for expense.
+
+Each entry has:
+
+Name/Description
+
+Amount
+
+Category (e.g., Salary, Food, Shopping, Bills)
+
+Date (auto or user input)
+
+Store in localStorage.
+
+Display Entries
+
+Show entries in a table or card layout.
+
+Include a delete button for each entry.
+
+Filter & Sort
+
+Filter by category or type (Income/Expense).
+
+Sort by:
+
+Date (newest → oldest)
+
+Amount (low → high, high → low)
+
+Totals & Balance
+
+Show total income, total expenses, and current balance.
+
+Update totals automatically when entries are added, deleted, or filtered.
+
+Charts (Optional, Advanced)
+
+Use Chart.js or a simple bar/pie chart to visualize:
+
+Expense distribution by category
+
+Income vs Expenses
+
+Persistence
+
+Everything stored in localStorage, so refreshing doesn’t lose data.
+
+Why This Is Complex
+
+Multiple types of data (income & expense)
+
+Multiple features working together: add, delete, filter, sort, total calculation
+
+Optional: Visualization with charts
+
+Forces you to think modularly (functions for add, delete, render, update totals, filter, sort, etc.)
+
+Optional Stretch Goals
+
+Monthly budget tracking: show monthly income, expense, and balance
+
+Editable entries: allow users to edit an expense instead of just deleting
+
+Search functionality: search by name/description
