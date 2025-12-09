@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app-wrapper">
+    <div class="card">
+      <h1 class="app-title">Expense Tracker</h1>
+      <p class="subtitle">Track your expenses and income</p>
+
+      <form id="expenseForm" class="expense-form">
+        <input type="text" id="transactionDescription" placeholder="Transaction Description" autocomplete="off" />
+        <input type="number" id="transactionAmount" placeholder="Amount" autocomplete="off" />
+        <select id="transactionType">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit" class="primary-btn">Add Transaction</button>
+      </form>
+
+      <div class="meta-bar">
+        <span class="badge">Total Balance</span>
+        <span class="balance" id="totalBalance">0</span>
+      </div>
+
+
+      <div id="transactionList" class="transaction-list">
+  
+        <!-- <div class="transaction-item income">
+          <span class="transaction-text">Freelance Work</span>
+          <span class="transaction-amount">+$500</span>
+          <button class="delete-btn">Delete</button>
+        </div>
+  
+        <div class="transaction-item expense">
+          <span class="transaction-text">Grocery Shopping</span>
+          <span class="transaction-amount">-$50</span>
+          <button class="delete-btn">Delete</button>
+        </div>
+  
+        <div class="transaction-item expense">
+          <span class="transaction-text">Dining Out</span>
+          <span class="transaction-amount">-$35</span>
+          <button class="delete-btn">Delete</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
