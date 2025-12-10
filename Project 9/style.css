@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: #1a1a2e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.clock-wrapper {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.clock-card {
+  background: rgba(24, 28, 48, 0.85);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+}
+
+.clock-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #00f5ff;
+  margin-bottom: 20px;
+}
+
+.clock-display {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+.date-display {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #9ca3c7;
+}
+
+@media (max-width: 480px) {
+  .clock-card {
+    padding: 30px;
+  }
+
+  .clock-display {
+    font-size: 48px;
+  }
+}
