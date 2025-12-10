@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub User Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app-wrapper">
+    <div class="content-wrapper">
+      <div class="search-bar">
+        <h1 class="app-title">GitHub User Finder</h1>
+        <p class="app-description">Find any GitHub user profile and explore their details</p>
+
+        <form class="search-input-wrapper" id="searchForm">
+
+          <input type="text" id="username" class="search-input" placeholder="Enter GitHub username" />
+          <button class="search-btn">Search</button>
+        </form>
+      </div>
+      <div class="profile-container" id="profileContainer">
+      </div>
+    </div>
+
+    <p id="errorMessage" class="error-message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

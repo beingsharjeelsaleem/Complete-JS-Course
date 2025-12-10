@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.app-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    gap: 40px;
+}
+
+.search-bar {
+    width: 40%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.app-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #00f5ff;
+    margin-bottom: 15px;
+}
+
+.app-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+.search-input-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #00f5ff;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #00f5ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0099cc;
+}
+
+
+.profile-container {
+    width: 55%;
+}
+
+.user-profile {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.user-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.user-profile h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00f5ff;
+}
+
+.user-profile p {
+    font-size: 16px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.profile-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #00f5ff;
+    text-decoration: none;
+    border: 1px solid #00f5ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #00f5ff;
+    color: #121212;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.user-profile.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .user-profile {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .user-profile img {
+        width: 120px;
+        height: 120px;
+    }
+}
