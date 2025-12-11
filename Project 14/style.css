@@ -1,0 +1,107 @@
+:root {
+  --bg: #05050a;
+  --panel: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e7e7ff;
+  --accent: #7c4dff;
+  --glow: 0 0 15px rgba(124, 77, 255, 0.8);
+  --soft-glow: 0 0 25px rgba(124, 77, 255, 0.25);
+}
+
+* {
+  font-family: "Orbitron", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.wrapper {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-shadow: var(--glow);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  outline: none;
+}
+
+button {
+  padding: 14px;
+  font-size: 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: var(--soft-glow);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 5px solid rgba(255,255,255,0.1);
+  border-top: 5px solid var(--accent);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+#imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#imageContainer img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--soft-glow);
+}
+
+.hidden {
+  display: none;
+}
