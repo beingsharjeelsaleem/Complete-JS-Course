@@ -1,4 +1,4 @@
-let form = document.querySelector("form");
+let searchInput = document.querySelector("#searchInput");
 let movieContainer = document.querySelector("#movieContainer");
 let loader = document.querySelector("#loader");
 movieContainer.innerHTML = "Search for the movie to show up";
@@ -17,7 +17,6 @@ async function getMovie(movie) {
     }
 
     const movieData = await response.json();
-    console.log(movieData.Search[0]);
 
     movieContainer.innerHTML = "";
 
@@ -57,15 +56,19 @@ async function getMovie(movie) {
   }
 }
 
-form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
+function debounce(fnc, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fnc(...args);
+    }, delay);
+  };
+}
 
-  let searchInput = document.querySelector("#searchInput").value;
-
-  if (searchInput.trim() === "") {
-    alert("please fillout the required field before submitting the form");
-  }
-
-  getMovie(searchInput);
-  form.reset();
-});
+searchInput.addEventListener(
+  "input",
+  debounce(function () {
+    getMovie(searchInput.value);
+  }, 500)
+);
