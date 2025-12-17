@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="start-screen" id="startScreen">
+      <h1>Quiz App</h1>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <div class="quiz-screen hidden" id="quizScreen">
+      <div class="question" id="questionText">Question</div>
+
+      <div class="options" id="options">
+        <!-- <button class="option">Option 1</button>
+        <button class="option">Option 2</button>
+        <button class="option">Option 3</button>
+        <button class="option">Option 4</button> -->
+      </div>
+
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="result-screen hidden" id="resultScreen">
+      <h2>Your Score</h2>
+      <p id="scoreText">0 / 0</p>
+      <button id="restartBtn">Restart</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
