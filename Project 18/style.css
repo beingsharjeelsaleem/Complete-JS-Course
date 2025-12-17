@@ -1,0 +1,72 @@
+:root {
+  --bg-main: #151422;
+  --glass: rgba(255,255,255,0.06);
+  --text: #e8e8e8;
+  --accent: #00ffc3;
+  --error: #ff4d4d;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #0b0c10, #151422);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+.app {
+  width: 400px;
+  background: var(--bg-main);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--accent);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass);
+  border-radius: var(--radius);
+  color: var(--text);
+  outline: none;
+}
+
+.error {
+  color: var(--error);
+  font-size: 12px;
+  height: 14px;
+}
+
+button {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent);
+  color: #000;
+}
