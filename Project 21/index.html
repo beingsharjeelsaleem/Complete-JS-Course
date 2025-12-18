@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app board">
+    <h1>Kanban Board</h1>
+
+    <form id="taskForm" class="task-form">
+      <input id="taskInput" type="text" placeholder="Add a task..." />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="columns">
+      <section class="column">
+        <div class="column-head">
+          <h2>To Do</h2>
+          <span class="count" id="todoCount">0</span>
+        </div>
+        <div class="dropzone" id="todo" data-status="todo">
+        </div>
+      </section>
+
+      <section class="column">
+        <div class="column-head">
+          <h2>Doing</h2>
+          <span class="count" id="doingCount">0</span>
+        </div>
+        <div class="dropzone" id="doing" data-status="doing"></div>
+      </section>
+
+      <section class="column">
+        <div class="column-head">
+          <h2>Done</h2>
+          <span class="count" id="doneCount">0</span>
+        </div>
+        <div class="dropzone" id="done" data-status="done"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
