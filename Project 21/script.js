@@ -17,7 +17,7 @@ function createTaskCard() {
   todoColumn.innerHTML = "";
   doingColumn.innerHTML = "";
   doneColumn.innerHTML = "";
-
+ 
   allTasks.forEach((task) => {
     const card = document.createElement("div");
     card.className = "card";
