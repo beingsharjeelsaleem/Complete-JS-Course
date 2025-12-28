@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery Lightbox</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>Gallery</h1>
+
+    <div class="grid" id="grid">
+    </div>
+  </div>
+
+  <div class="lightbox hidden" id="lightbox">
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal">
+      <button class="close" id="closeBtn">Close</button>
+      <button class="nav prev" id="prevBtn">Prev</button>
+      <img class="big" id="bigImg" src="" alt="Selected image">
+      <button class="nav next" id="nextBtn">Next</button>
+      <div class="hint" id="hint">Keys: Esc (close) • ← → (navigate)</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
