@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>Typing Speed Test</h1>
+
+    <div class="panel">
+      <div class="stats">
+        <div class="stat">
+          <div class="label">Time</div>
+          <div class="value" id="timeLeft">60</div>
+        </div>
+        <div class="stat">
+          <div class="label">WPM</div>
+          <div class="value" id="wpm">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">Accuracy</div>
+          <div class="value" id="accuracy">0%</div>
+        </div>
+      </div>
+
+      <div class="text-box" id="textBox">
+        <span class="word">Loading text...</span>
+      </div>
+
+      <textarea id="typingInput" class="input" placeholder="Start typing here..." disabled></textarea>
+
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div class="message" id="message">Press Start to begin</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
